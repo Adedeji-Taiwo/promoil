@@ -1,0 +1,5 @@
+export {default as Header} from './Header'
+export {default as Challenge} from './Challenge'
+export {default as Footer} from './Footer'
+export {default as Team} from './Team'
+export {default as Testimonial} from './Testimonial'

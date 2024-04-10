@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+    html {
+      font-family: 'Poppins', sans-serif;
+    }
+  }
+  
+  
+  
+  .floating { 
+    animation-name: floating; 
+    animation-duration: 3s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;
+  } 
+  @keyframes floating { 
+    0% { transform: translate(0, 0px); -webkit-transform: translate(0, 0px); -moz-transform: translate(0, 0px); -ms-transform: translate(0, 0px); -o-transform: translate(0, 0px); } 
+    50% { transform: translate(0, 8px); } 
+    100% { transform: translate(0, -0px); -webkit-transform: translate(0, -0px); -moz-transform: translate(0, -0px); -ms-transform: translate(0, -0px); -o-transform: translate(0, -0px); }  
+  } 
+  .floating-4 { 
+    animation-name: floating; 
+    animation-duration: 4s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;
+  } 
+  @keyframes floating-4 { 
+    0% { transform: translate(0, 0px); } 
+    50% { transform: translate(0, 8px); } 
+    100% { transform: translate(0, -0px); }  
+  }
+  
+  
+  
+  
+  .animation-pulse {
+    animation: pulsate 2s infinite;
+    -webkit-animation: pulsate 2s infinite;
+  }
+  
+  @keyframes pulsate {
+    0% {
+        transform: scale(0.8);
+        box-shadow: 0 0 0 0 #FF3939;
+    }
+  
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 60px rgba(229, 62, 62, 0);
+    }
+  
+    100% {
+        transform: scale(0.8);
+    }
+  }
+  
+  .animate-ball {
+    animation: balling 0.5s linear infinite alternate;
+    -webkit-animation: balling 0.5s linear infinite alternate;
+  }
+  
+  @keyframes balling {
+    from { transform: translateX(-50%) scale(0.5); }
+    to { transform: translateX(-50%) scale(1); }
+  }
+  
+  
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* For IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  
+  /*max width for lazy load component*/
+  span.lazy-load-image-background,
+  span.lazy-load-image-background > img {
+    width: 100%;
+  }
+  
+  /*Moving marquee fog thickness*/
+  div.marquee-container > div.overlay::before, div.overlay::after {
+    --gradient-width:80px;
+  }
+  
+  
+  /*for roadmap card positioning*/
+  @media (max-width: 640px) {
+   .justifying {
+    justify-content: flex-end !important;
+   }
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @keyframes modal-video {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes modal-video-inner {
+    from {
+      transform: translate(0, 100px);
+    }
+    to {
+      transform: translate(0, 0);
+    }
+  }
+  .modal-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000000;
+    cursor: pointer;
+    opacity: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 0.3s;
+    animation-name: modal-video;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -ms-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+  }
+  
+  .modal-video-effect-exit {
+    opacity: 0;
+  }
+  .modal-video-effect-exit .modal-video-movie-wrap {
+    -webkit-transform: translate(0, 100px);
+    -moz-transform: translate(0, 100px);
+    -ms-transform: translate(0, 100px);
+    -o-transform: translate(0, 100px);
+    transform: translate(0, 100px);
+  }
+  
+  .modal-video-body {
+    max-width: 960px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  
+  .modal-video-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  @media (orientation: landscape) {
+    .modal-video-inner {
+      padding: 10px 60px;
+      box-sizing: border-box;
+    }
+  }
+  
+  .modal-video-movie-wrap {
+    width: 100%;
+    height: 0;
+    position: relative;
+    padding-bottom: 56.25%;
+    background-color: #333;
+    animation-timing-function: ease-out;
+    animation-duration: 0.3s;
+    animation-name: modal-video-inner;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -ms-transition: -ms-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+  }
+  .modal-video-movie-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .modal-video-close-btn {
+    position: absolute;
+    z-index: 2;
+    top: -45px;
+    right: 0px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    border: none;
+    background: transparent;
+  }
+  @media (orientation: landscape) {
+    .modal-video-close-btn {
+      top: 0;
+      right: -45px;
+    }
+  }
+  .modal-video-close-btn:before {
+    transform: rotate(45deg);
+  }
+  .modal-video-close-btn:after {
+    transform: rotate(-45deg);
+  }
+  .modal-video-close-btn:before, .modal-video-close-btn:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: -6px;
+  }
+
+
+
+
+
+
+
+
+
+  blockquote {
+		background:
+			linear-gradient(to right, #039be5 6px, transparent 4px) 0 100%,
+			linear-gradient(to left, #039be5 6px, transparent 4px) 100% 0,
+			linear-gradient(to bottom, #039be5 6px, transparent 4px) 100% 0,
+			linear-gradient(to top, #039be5 6px, transparent 4px) 0 100%;
+		background-repeat: no-repeat;
+		background-size: 20px 20px;
+	}
+
+	/* -- create the quotation marks -- */
+	blockquote:before,
+	blockquote:after {
+		font-family: FontAwesome;
+		position: absolute;
+		color: #039be5;
+		font-size: 34px;
+	}
+
+	blockquote:before {
+		content: "\f10d";
+		top: -12px;
+		margin-right: -20px;
+		right: 100%;
+	}
+
+	blockquote:after {
+		content: "\f10e";
+		margin-left: -20px;
+		left: 100%;
+		top: auto;
+		bottom: -20px;
+	}

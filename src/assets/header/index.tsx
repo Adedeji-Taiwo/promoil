@@ -1,0 +1,26 @@
+
+export { default as promoilVideo } from './promoil.mp4';
+export {default as col3} from './col3.png'
+export {default as col2} from './col2.png'
+export {default as col1} from './col4.png'
+export {default as promoil} from './promoil.png';
+export {default as hash} from './hash.png'
+export {default as arrow} from './arrow.gif'
+export {default as w1} from './w1.jpg'
+export {default as w6} from './w6.jpg'
+export {default as w2} from './w2.jpg'
+export {default as w7} from './w7.jpg'
+export {default as w8} from './w8.jpg'
+
+export {default as w11} from './w11.jpg'
+export {default as w12} from './w12.jpg'
+export {default as w13} from './w13.jpg'
+export {default as w14} from './w14.jpg'
+export {default as w15} from './w15.jpg'
+export {default as w16} from './w16.jpg'
+export {default as w17} from './w17.jpg'
+export {default as w18} from './w18.jpg'
+export {default as w19} from './w19.jpg'
+export {default as w20} from './w20.jpg'
+export {default as w21} from './w21.jpg'
+export {default as w22} from './w22.jpg'
