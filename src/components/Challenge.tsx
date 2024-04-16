@@ -4,7 +4,7 @@ import { w11, w12, w13, w14, w15, w16, w17, w18, w19, w20, w21, w22 } from '../a
 const Challenge = () => {
   return (
     <div className="relative container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700">
-            <img src={arrow} alt="arrow" className='absolute w-full h-auto max-w-[80px] rotate-180 top-0 md:left-12'/>
+            <img src={arrow} alt="arrow" className='absolute w-full h-auto lg:max-w-[80px] max-w-[70px] rotate-180 lg:top-0 -top-20 md:left-12'/>
 			<div data-aos="flip-up" className="max-w-xl mx-auto text-center mt-24 ">
 				<h1 className="flex flex-row items-center justify-center gap-0 font-bold text-navy my-3 md:text-3xl text-2xl"><img src={hash} alt="hash" className='w-full h-auto max-w-[50px]'/> <span className="">Naturally You!</span></h1>
 				<p className="leading-relaxed text-gray-500 lg:text-base text-sm">A collection of 1000+ images uploaded by our customers that offer a more inclusive vision of beauty for all.</p>
