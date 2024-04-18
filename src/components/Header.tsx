@@ -7,6 +7,7 @@ import { col3, col2, col1, promoil} from "../assets/header/index";
 import Hero from './Hero';
 import { headerDataType } from '../types';
 import Button from './Button';
+import { Link } from 'react-router-dom';
 
 
 
@@ -112,6 +113,7 @@ const Header = () => {
                                                   
 
                                     <a className={`${mobileDropdownOpen && 'blur-2xl'} px-4 py-2 mt-2 md:text-base text-sm bg-transparent rounded-lg lg:mt-8 lg:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline`} href="#home" onClick={() => { setOpen(false) }}>Home</a>
+                                    <Link to='/advert' className={`${mobileDropdownOpen && 'blur-2xl'} px-4 py-2 mt-2 md:text-base text-sm bg-transparent rounded-lg lg:mt-8 lg:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline`} onClick={() => setOpen(false)}>TV Ads</Link>
                                     <a className={`${mobileDropdownOpen && 'blur-2xl'} px-4 py-2 mt-2 md:text-base text-sm bg-transparent rounded-lg lg:mt-8 lg:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline`} href="#products" onClick={() => setOpen(false)}>Products</a>
                                     <a className={`${mobileDropdownOpen && 'blur-2xl'} px-4 py-2 mt-2 md:text-base text-sm bg-transparent rounded-lg lg:mt-8 lg:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline`} href="#tips&care" onClick={() => setOpen(false)}>Tips & Care</a>
                                     <a className={`${mobileDropdownOpen && 'blur-2xl'} px-4 py-2 mt-2 md:text-base text-sm bg-transparent rounded-lg lg:mt-8 lg:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline`} href="#mission" onClick={() => setOpen(false)}>Mission</a>
